@@ -1,0 +1,125 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - check_available_movies
+  - get_movie_info
+  - book_ticket
+  - cancel_ticket
+
+actions:
+  - action_display_available_movies
+  - action_display_movie_info
+  - action_ask_book_movie
+  - action_ask_book_theater
+  - action_ask_book_time
+  - action_ask_num_tickets
+  - action_ask_e_mail
+  - action_return_summary
+
+slots:
+  movie:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: simple_movie_form
+        requested_slot: movie
+  book_movie:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: book_ticket_form
+        requested_slot: book_movie
+  book_theater:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: book_ticket_form
+        requested_slot: book_theater
+  book_time:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: book_ticket_form
+        requested_slot: book_time
+  num_tickets:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: book_ticket_form
+        requested_slot: num_tickets
+  e_mail:
+    type: text
+    influence_conversation: true
+    mappings:
+    - type: from_text
+      conditions:
+      - active_loop: book_ticket_form
+        requested_slot: e_mail
+
+forms:
+  simple_movie_form:
+    required_slots:
+      - movie
+  book_ticket_form:
+    required_slots:
+      - book_movie
+      - book_theater
+      - book_time
+      - num_tickets
+      - e_mail
+
+responses:
+  utter_greet:
+  - text: "Welcome to the Pillage Cinemas Virtual Assistant! How can I help you?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Thank you for talking! Be sure to return for the next Blockbuster screening!"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+
+  utter_ask_movie:
+  - text: "Sure! What film would you like to know about?"
+
+  utter_submit:
+  - text: "Done!"
+
+  utter_cancel_message:
+  - text: "I'm afraid cancellations cannot be made online. However, there are several cancellation options provided you speak to one of our employees in one of our theaters. Would you like to know more?"
+
+  utter_cancel_options:
+  - text: "You can cancel your tickets and either:\n- Get a full refund\n- Get a coupon for buying new tickets\n- Get credits for the arcade and our official Pillage Cinemas Movie Store\n\nCan I help you with anything else?"
+
+  utter_change_subject:
+  - text: "Anything else I can help you with?"
+  
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

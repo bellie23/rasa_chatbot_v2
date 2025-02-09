@@ -1,0 +1,33 @@
+version: "3.1"
+
+stories:
+
+- story: greet path
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- story: bye path
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- story: browse movies path
+  steps:
+  - intent: check_available_movies
+  - action: action_display_available_movies
+
+- story: cancel tickets affirm path
+  steps:
+  - intent: cancel_ticket
+  - action: utter_cancel_message
+  - intent: affirm
+  - action: utter_cancel_options
+
+- story: cancel tickets deny path
+  steps:
+  - intent: cancel_ticket
+  - action: utter_cancel_message
+  - intent: deny
+  - action: utter_change_subject
+  
