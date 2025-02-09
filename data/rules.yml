@@ -1,0 +1,46 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say 'I am a bot' anytime the user challenges
+  steps:
+  - intent: bot_challenge
+  - action: utter_iamabot
+
+- rule: Activate simple movie form
+  steps:
+    - intent: get_movie_info
+    - action: simple_movie_form
+    - active_loop: simple_movie_form
+  
+- rule: Submit simple movie form
+  condition:
+  - active_loop: simple_movie_form
+  steps:
+  - action: simple_movie_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: utter_submit
+  - action: action_display_movie_info
+
+- rule: Activate book ticket form
+  steps:
+    - intent: book_ticket
+    - action: book_ticket_form
+    - active_loop: book_ticket_form
+
+- rule: Submit book ticket form
+  condition:
+  - active_loop: book_ticket_form
+  steps:
+  - action: book_ticket_form
+  - active_loop: null
+  - slot_was_set:
+    - requested_slot: null
+  - action: action_return_summary

@@ -1,0 +1,131 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: mood_great
+  examples: |
+    - perfect
+    - great
+    - amazing
+    - feeling like a king
+    - wonderful
+    - I am feeling very good
+    - I am great
+    - I am amazing
+    - I am going to save the world
+    - super stoked
+    - extremely good
+    - so so perfect
+    - so good
+    - so perfect
+
+- intent: mood_unhappy
+  examples: |
+    - my day was horrible
+    - I am sad
+    - I don't feel very well
+    - I am disappointed
+    - super sad
+    - I'm so sad
+    - sad
+    - very sad
+    - unhappy
+    - not good
+    - not very good
+    - extremly sad
+    - so saad
+    - so sad
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+
+- intent: check_available_movies
+  examples: |
+    - What should I watch?
+    - Do you have any good movies playing today?
+    - What is playing today?
+    - Do you have any film recommendations.
+    - I'd like to watch movie.
+    - Any good movies playing tonight?
+    - Show available movies
+  
+- intent: get_movie_info
+  examples: |
+    - I'd like to learn about a movie.
+    - I'd like more details on a certain film.
+    - Tell me more about the movies that are playing tonight.
+    - Could you provide any details?
+    - I want to learn more about tonight's films.
+    - Do you have any info on tonight's movies?
+    - Show details
+
+- intent: book_ticket
+  examples: |
+    - I'd like to book a ticket.
+    - I want to purchase a ticket.
+    - Buy tickets
+    - Purchase ticket
+    - Can I order tickets please?
+    - Book
+    - How to book
+
+- intent: cancel_ticket
+  examples: |
+    - Cancel ticket
+    - I want to cancel my tickets
+    - Can I cancel my tickets?
+    - Could you help me cancel a booking?
+    - How do I cancel my reservations?
+    - Cancel
+    - How to cancel
