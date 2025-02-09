@@ -1,0 +1,13 @@
+{
+  "0": "affirm",
+  "1": "book_ticket",
+  "2": "bot_challenge",
+  "3": "cancel_ticket",
+  "4": "check_available_movies",
+  "5": "deny",
+  "6": "get_movie_info",
+  "7": "goodbye",
+  "8": "greet",
+  "9": "mood_great",
+  "10": "mood_unhappy"
+}

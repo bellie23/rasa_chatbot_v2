@@ -1,0 +1,77 @@
+{
+  "type": "MaxHistoryTrackerFeaturizer",
+  "state_featurizer": {
+    "action_texts": [],
+    "entity_tag_specs": [],
+    "feature_states": {
+      "intent": {
+        "affirm": 0,
+        "back": 1,
+        "book_ticket": 2,
+        "bot_challenge": 3,
+        "cancel_ticket": 4,
+        "check_available_movies": 5,
+        "deny": 6,
+        "get_movie_info": 7,
+        "goodbye": 8,
+        "greet": 9,
+        "mood_great": 10,
+        "mood_unhappy": 11,
+        "nlu_fallback": 12,
+        "out_of_scope": 13,
+        "restart": 14,
+        "session_start": 15
+      },
+      "action_name": {
+        "action_listen": 0,
+        "action_restart": 1,
+        "action_session_start": 2,
+        "action_default_fallback": 3,
+        "action_deactivate_loop": 4,
+        "action_revert_fallback_events": 5,
+        "action_default_ask_affirmation": 6,
+        "action_default_ask_rephrase": 7,
+        "action_two_stage_fallback": 8,
+        "action_unlikely_intent": 9,
+        "action_back": 10,
+        "...": 11,
+        "action_extract_slots": 12,
+        "action_display_available_movies": 13,
+        "action_display_movie_info": 14,
+        "action_ask_book_movie": 15,
+        "action_ask_book_theater": 16,
+        "action_ask_book_time": 17,
+        "action_ask_num_tickets": 18,
+        "action_ask_e_mail": 19,
+        "action_return_summary": 20,
+        "utter_ask_movie": 21,
+        "utter_cancel_message": 22,
+        "utter_cancel_options": 23,
+        "utter_cheer_up": 24,
+        "utter_did_that_help": 25,
+        "utter_goodbye": 26,
+        "utter_greet": 27,
+        "utter_happy": 28,
+        "utter_iamabot": 29,
+        "utter_submit": 30,
+        "simple_movie_form": 31,
+        "book_ticket_form": 32
+      },
+      "entities": {},
+      "slots": {
+        "movie_0": 0,
+        "book_movie_0": 1,
+        "book_theater_0": 2,
+        "book_time_0": 3,
+        "num_tickets_0": 4,
+        "e_mail_0": 5
+      },
+      "active_loop": {
+        "simple_movie_form": 0,
+        "book_ticket_form": 1
+      }
+    }
+  },
+  "remove_duplicates": true,
+  "max_history": 5
+}

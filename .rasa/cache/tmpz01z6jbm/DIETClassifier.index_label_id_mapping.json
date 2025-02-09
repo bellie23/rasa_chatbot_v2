@@ -1,0 +1,11 @@
+{
+  "0": "affirm",
+  "1": "bot_challenge",
+  "2": "check_available_movies",
+  "3": "deny",
+  "4": "get_movie_info",
+  "5": "goodbye",
+  "6": "greet",
+  "7": "mood_great",
+  "8": "mood_unhappy"
+}
